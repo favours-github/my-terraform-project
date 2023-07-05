@@ -20,7 +20,7 @@ resource "aws_instance" "webserver_instance" {
   key_name      = "my-key-pair"   # Replace with the name of your key pair
 
   vpc_security_group_ids = [aws_security_group.webserver_security_group.id]
-  
+  subnet_id              = "subnet-0f6035588cadc35bb"
 
   tags = {
     Name = "Webserver Instance"
